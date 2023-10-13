@@ -5,7 +5,7 @@ class Conta {
 
     private int numAgencia;
     private int numConta;
-    private double saldo = 0.0;
+    private double saldo = 0.00;
     private List<String> historico = new ArrayList<>();
 
     public Conta(int numAgencia, int numConta) {
@@ -15,7 +15,7 @@ class Conta {
     public String depositar(double valor){
         if(valor > 0){
             this.saldo = saldo + valor;
-            this.historico.add("Deposito realizado de "+ valor + " reais na conta " + this.numConta);
+            this.historico.add("Deposito realizado de "+ String.format("%.2f", valor) + " R$ na conta " + this.numConta + " saldo: " + String.format("%.2f", this.saldo)+" R$");
             return "Deposito bem sucedido!";
         }else{
             return "O valor do depósito não pode ser igual a 0 e não pode ser negativo";
@@ -24,7 +24,7 @@ class Conta {
     public String sacar(double valor){
         if(this.saldo >= valor){
             this.saldo = saldo - valor;
-            this.historico.add("Saque realizado de "+ valor + " reais na conta " + this.numConta);
+            this.historico.add("Saque realizado de "+ String.format("%.2f", valor) + " R$ na conta " + this.numConta + " saldo: " + String.format("%.2f", this.saldo)+" R$");
             return "Saque bem sucedido!";
         }else{
             return "Saldo insuficiente para realizar o saque!";
@@ -35,7 +35,7 @@ class Conta {
         if(this.saldo >= valor){
             this.saldo -= valor;
             conta.setSaldo(valor);
-            this.historico.add("Transferência realizada de "+ valor + " reais da conta " + this.numConta + " para a conta " + conta.getNunConta());
+            this.historico.add("Transferência realizada de "+ String.format("%.2f", valor) + " R$ da conta " + this.numConta + " para a conta " + conta.getNunConta() + " saldo: " + String.format("%.2f", this.saldo)+" R$");
             return "Tranferencia bem sucedida!";
         }else{
             return "Saldo insuficiente para realizar a transferencia!";
@@ -52,10 +52,11 @@ class Conta {
         return this.numConta;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public String getSaldo() {
+        return "Saldo da conta " + this.numConta + " : " + String.format("%.2f", this.saldo)+" R$";
     }
 
+    // atribuir valor a variavel privada saldo.
     public void setSaldo(double saldo) {
          this.saldo += saldo;
     }
