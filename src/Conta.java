@@ -12,19 +12,21 @@ class Conta {
         this.numAgencia = numAgencia;
         this.numConta = numConta;
     }
-    public String depositar(double valor){
+    public boolean depositar(double valor){
         if(valor > 0){
             this.saldo = saldo + valor;
             this.historico.add("Deposito realizado de "+ String.format("%.2f", valor) + " R$ na conta " + this.numConta + " saldo: " + String.format("%.2f", this.saldo)+" R$");
-            return "Deposito bem sucedido!";
+            this.enviaNotificacao("deposito", valor);
+            return true;
         }else{
-            return "O valor do depósito não pode ser igual a 0 e não pode ser negativo";
+            return false;
         }
     }
     public String sacar(double valor){
         if(this.saldo >= valor){
             this.saldo = saldo - valor;
             this.historico.add("Saque realizado de "+ String.format("%.2f", valor) + " R$ na conta " + this.numConta + " saldo: " + String.format("%.2f", this.saldo)+" R$");
+            this.enviaNotificacao("sacar", valor);
             return "Saque bem sucedido!";
         }else{
             return "Saldo insuficiente para realizar o saque!";
@@ -36,11 +38,19 @@ class Conta {
             this.saldo -= valor;
             conta.setSaldo(valor);
             this.historico.add("Transferência realizada de "+ String.format("%.2f", valor) + " R$ da conta " + this.numConta + " para a conta " + conta.getNunConta() + " saldo: " + String.format("%.2f", this.saldo)+" R$");
+            this.enviaNotificacao("transferencia", valor);
             return "Tranferencia bem sucedida!";
         }else{
             return "Saldo insuficiente para realizar a transferencia!";
         }
     } 
+
+    public void enviaNotificacao(String tipo, double valor){
+        Notificacao sms = new Sms();
+        Notificacao email = new Email();
+        sms.enviarNotificacao(tipo, valor);
+        email.enviarNotificacao(tipo, valor);
+    }
     
     public void exibirExtrato(){
         for(int i = 0; i < historico.size(); i++){
@@ -56,8 +66,8 @@ class Conta {
         return "Saldo da conta " + this.numConta + " : " + String.format("%.2f", this.saldo)+" R$";
     }
 
-    // atribuir valor a variavel privada saldo.
     public void setSaldo(double saldo) {
          this.saldo += saldo;
     }
+
 }
