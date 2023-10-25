@@ -33,11 +33,11 @@ class Conta {
         }  
     }
 
-    public String transferirParaOutraConta(double valor, Conta conta){
+    public String transferirParaOutraConta(double valor, String string){
         if(this.saldo >= valor){
             this.saldo -= valor;
-            conta.setSaldo(valor);
-            this.historico.add("Transferência realizada de "+ String.format("%.2f", valor) + " R$ da conta " + this.numConta + " para a conta " + conta.getNunConta() + " saldo: " + String.format("%.2f", this.saldo)+" R$");
+            string.setSaldo(valor);
+            this.historico.add("Transferência realizada de "+ String.format("%.2f", valor) + " R$ da conta " + this.numConta + " para a conta " + string.getNunConta() + " saldo: " + String.format("%.2f", this.saldo)+" R$");
             this.enviaNotificacao("transferencia", valor);
             return "Tranferencia bem sucedida!";
         }else{
@@ -68,6 +68,10 @@ class Conta {
 
     public void setSaldo(double saldo) {
          this.saldo += saldo;
+    }
+
+    public int getNunAgencia(){
+        return numAgencia;
     }
 
 }

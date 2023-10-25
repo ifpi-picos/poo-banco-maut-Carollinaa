@@ -23,11 +23,11 @@ public class Cliente {
 
         Endereco fixo = new Endereco("Rua das oliveiras", 234, "Centro", "São Maria", "Piauí" );
 
-        Cliente dados = new Cliente("Carol", "000000000", "12/03/2004", fixo);
+         new Cliente("Carol", "000000000", "12/03/2004", fixo);
 
 
-        Conta contaPoupanca = new ContaPoupanca(123,111111);
-        Conta contaCorente = new ContaCorente(545,222222);
+        Conta contaPoupanca = new ContaPoupanca(123,111111, 3.5);
+        Conta contaCorente = new ContaCorente(545,22222, 7000);
 
         System.out.println(contaPoupanca.depositar(100.00));
         System.out.println(contaPoupanca.depositar(10.00));
