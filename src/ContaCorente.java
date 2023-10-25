@@ -7,4 +7,7 @@ public class ContaCorente extends Conta{
         super(numAgencia, numConta);
     }
  
+    public void transferencia(double valor, Conta contaDestino){
+        super.transferirParaOutraConta(valor, contaDestino);
+    }
 }
