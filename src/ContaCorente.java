@@ -8,6 +8,7 @@ public class ContaCorente extends Conta{
         this.chequeEspecial = chequeEspecial;
     }
  
+    //erro de compilação
     @Override
     public String transferencia(double valor, String conta){
         return super.transferirParaOutraConta(valor, conta)+" - Conta corrente";

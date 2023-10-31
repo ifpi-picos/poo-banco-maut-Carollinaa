@@ -1,33 +1,37 @@
 public class Cliente {
 
-    private  String nome;
-    private  String cpf;
-    private  String dataDeNascimento;
+    private String nome;
+    private String cpf;
+    private String dataDeNascimento;
 
-    public Cliente(String nome, String cpf, String dataDeNascimento, Endereco endereco){
+    // endereço não está sendo usado, mas deveria
+    public Cliente(String nome, String cpf, String dataDeNascimento, Endereco endereco) {
         this.nome = nome;
         this.cpf = cpf;
     }
 
-    public String getNome(){
+    public String getNome() {
         return this.nome;
     }
-    public String getCpf(){
+
+    public String getCpf() {
         return this.cpf;
-     }
-      public String getDataDeNascimento(){
+    }
+
+    public String getDataDeNascimento() {
         return this.dataDeNascimento;
     }
 
-    public static void main(String[] args){
+    // método main não deveria estar nessa classe
+    public static void main(String[] args) {
 
-        Endereco fixo = new Endereco("Rua das oliveiras", 234, "Centro", "São Maria", "Piauí" );
+        Endereco fixo = new Endereco("Rua das oliveiras", 234, "Centro", "São Maria", "Piauí");
 
-         new Cliente("Carol", "000000000", "12/03/2004", fixo);
+        new Cliente("Carol", "000000000", "12/03/2004", fixo);
 
 
-        Conta contaPoupanca = new ContaPoupanca(123,111111, 3.5);
-        Conta contaCorente = new ContaCorente(545,22222, 7000);
+        Conta contaPoupanca = new ContaPoupanca(123, 111111, 3.5);
+        Conta contaCorente = new ContaCorente(545, 22222, 7000);
 
         System.out.println(contaPoupanca.depositar(100.00));
         System.out.println(contaPoupanca.depositar(10.00));
@@ -41,6 +45,6 @@ public class Cliente {
         System.out.println(contaCorente.getSaldo());
 
         contaPoupanca.exibirExtrato();
-        
+
     }
 }
