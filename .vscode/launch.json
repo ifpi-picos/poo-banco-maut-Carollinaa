@@ -1,0 +1,165 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-Emyllebsousa_4a3f78db"
+    },
+    {
+      "type": "java",
+      "name": "App(1)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-JeanCarlos899_3fc93a72"
+    },
+    {
+      "type": "java",
+      "name": "SistemaDasContas",
+      "request": "launch",
+      "mainClass": "SistemaDasContas",
+      "projectName": "poo-banco-maut-JosePedro1_2ce144be"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "poo-banco-maut-Kariellyy_25d9d2f6"
+    },
+    {
+      "type": "java",
+      "name": "App(2)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-LivyaKelly_110e11e0"
+    },
+    {
+      "type": "java",
+      "name": "App(3)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-Maria-Emilia1_579b5d5"
+    },
+    {
+      "type": "java",
+      "name": "App(4)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-Matheus-Da-Silva_2679fc65"
+    },
+    {
+      "type": "java",
+      "name": "Banco",
+      "request": "launch",
+      "mainClass": "Banco",
+      "projectName": "poo-banco-maut-Matheusloran573_ef15172e"
+    },
+    {
+      "type": "java",
+      "name": "Main(1)",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "poo-banco-maut-Matheusloran573_ef15172e"
+    },
+    {
+      "type": "java",
+      "name": "App(5)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-MaykonWSF_c4a58123"
+    },
+    {
+      "type": "java",
+      "name": "Main(2)",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "poo-banco-maut-Okokillo_1815e480"
+    },
+    {
+      "type": "java",
+      "name": "App(6)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-jenniferemanuele_a02a7065"
+    },
+    {
+      "type": "java",
+      "name": "App(7)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-jhulialeal_14b29253"
+    },
+    {
+      "type": "java",
+      "name": "App(8)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-kednaleal_71a4e8df"
+    },
+    {
+      "type": "java",
+      "name": "App(9)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-leticiabarros23_63532daf"
+    },
+    {
+      "type": "java",
+      "name": "App(10)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-marcielysilva_9b9ff251"
+    },
+    {
+      "type": "java",
+      "name": "Cliente",
+      "request": "launch",
+      "mainClass": "Cliente",
+      "projectName": "poo-banco-maut-marcielysilva_9b9ff251"
+    },
+    {
+      "type": "java",
+      "name": "App(11)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-megusta01_45d399d9"
+    },
+    {
+      "type": "java",
+      "name": "App(12)",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "poo-banco-maut-thaylanni_54591966"
+    },
+    {
+      "type": "java",
+      "name": "App(13)",
+      "request": "launch",
+      "mainClass": "App"
+    },
+    {
+      "type": "java",
+      "name": "BancoMaut",
+      "request": "launch",
+      "mainClass": "BancoMaut"
+    },
+    {
+      "type": "java",
+      "name": "Cliente(1)",
+      "request": "launch",
+      "mainClass": "Cliente"
+    }
+  ]
+}
